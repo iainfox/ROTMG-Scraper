@@ -1,4 +1,5 @@
 # Rotmg Scraper
+
 Scrapes the [RealmEye website](https://www.realmeye.com) for most of the important information you could possibly need.  
 
 ## API Methods  
@@ -6,6 +7,7 @@ Scrapes the [RealmEye website](https://www.realmeye.com) for most of the importa
 ### Player Class  
 
 #### `getPlayerInfo(userName: str, log: bool = False) -> dict`  
+
 Retrieves basic player information from RealmEye.  
 
 - `userName`: The player's in-game name.  
@@ -13,6 +15,7 @@ Retrieves basic player information from RealmEye.
 - Returns: A dictionary containing player stats like rank, fame, and guild.  
 
 #### `getPlayerCharacters(userName: str, log: bool = False) -> dict`  
+
 Fetches character data for the specified player.  
 
 - `userName`: The player's in-game name.  
@@ -20,6 +23,7 @@ Fetches character data for the specified player.
 - Returns: A dictionary with character class, level, fame, and other details.  
 
 #### `getPlayerPets(userName: str, log: bool = False) -> dict`  
+
 Gets pet information for a player.  
 
 - `userName`: The player's in-game name.  
@@ -29,6 +33,7 @@ Gets pet information for a player.
 ### Guild Information  
 
 #### `getGuild(guildName: str, log: bool = False) -> dict`  
+
 Retrieves information about a guild.  
 
 - `guildName`: The name of the guild.  
@@ -38,6 +43,7 @@ Retrieves information about a guild.
 ### Trading Data  
 
 #### `getOfferCount(item: str, log: bool = False, ssnl: bool = False, offerType: str = "buy") -> int`  
+
 Gets the number of trade offers for an item.  
 
 - `item`: Name of the item.  
@@ -47,6 +53,7 @@ Gets the number of trade offers for an item.
 - Returns: The number of offers available.  
 
 #### `getAllOffers(log: bool = False, ssnl: bool = False, offerType: str = "buy") -> dict`  
+
 Retrieves all buy/sell offers available.  
 
 - `log`: If `True`, prints debug info.
@@ -55,6 +62,7 @@ Retrieves all buy/sell offers available.
 - Returns: A dictionary with items and their respective offer counts.  
 
 #### `convertItemToId(item: str, log: bool = False) -> int`  
+
 Converts an item name to its RealmEye item ID.  
 
 - `item`: Name of the item.  
@@ -62,12 +70,14 @@ Converts an item name to its RealmEye item ID.
 - Returns: The item’s unique ID.  
 
 #### `getItemFromId(id: int) -> str`  
+
 Retrieves an item name from its RealmEye item ID.  
 
 - `id`: Item ID.  
 - Returns: The item name.  
 
 #### `getOffersFor(item: str, log: bool = False, ssnl: bool = False, offerType: str = "buy") -> list`  
+
 Fetches a list of trade offers for a specific item.  
 
 - `item`: Name of the item.  
