@@ -192,16 +192,15 @@ def getAllOffers(log: bool = False, ssnl = False,  offerType = "buy"):
         print(e)
         return None
 
-def getItemToId(item: str = "Potion of Defense", log: bool = False):
+def getIdFromItem(item: str = "Potion of Defense", log: bool = False):
     try:
-        url = "https://www.realmeye.com/current-offers"
+        url = f"https://www.realmeye.com/wiki/{item.replace(' ', '-')}"
         response = session.get(url)
 
-        allOffers = response.html.find(".item-buying")
-        for offer in allOffers:
-            if len(offer.attrs["class"]) == 1:
-                if item == offer.attrs["title"].lstrip("Offers to buy "):
-                    return int(offer.attrs["href"].lstrip("/offers-to/buy/"))
+        a = next((el for el in response.html.find("a") if "Current offers" in el.text), None)
+        if a:
+            return int(a.attrs["href"].lstrip("/offers-to/sell/"))
+        return None
 
     except RequestException as e:
         print(e)
@@ -220,7 +219,7 @@ def getItemFromId(id: int = 2592):
 
 def getOffersFor(item: str = "Potion of Defense", log: bool = False, ssnl = False, offerType = "buy"):
     try:
-        url = f"https://www.realmeye.com/offers-to/{offerType}/{convertItemToId(item)}"
+        url = f"https://www.realmeye.com/offers-to/{offerType}/{getIdFromItem(item)}"
         if ssnl:
             url+="?seasonal"
         response = session.get(url)
