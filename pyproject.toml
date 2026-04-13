@@ -1,0 +1,19 @@
+[project]
+name = "rotmg_scraper"
+version = "1.0.1"
+authors = [
+  { name="Iain Fox", email="iainpfox@gmail.com" },
+]
+description = "A web scraper for the ROTMG Realm Eye website to simplify gathering ROTMG data."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/iainfox/ROTMG-Scraper"
+Issues = "https://github.com/iainfox/ROTMG-Scraper/issues"

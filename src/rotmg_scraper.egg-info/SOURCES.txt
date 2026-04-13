@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/rotmg_scraper/__init__.py
+src/rotmg_scraper/main.py
+src/rotmg_scraper.egg-info/PKG-INFO
+src/rotmg_scraper.egg-info/SOURCES.txt
+src/rotmg_scraper.egg-info/dependency_links.txt
+src/rotmg_scraper.egg-info/top_level.txt

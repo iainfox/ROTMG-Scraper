@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Iain Fox
+
 from requests import RequestException
 import requests_html
 session = requests_html.HTMLSession()
