@@ -1,6 +1,6 @@
 # Rotmg Scraper
 
-Scrapes the [RealmEye website](https://www.realmeye.com) for most of the important information you could possibly need.  
+Scrapes the [RealmEye website](https://www.realmeye.com) for most of the important information you could need.  
 
 ## API Methods  
 
@@ -88,5 +88,12 @@ Fetches a list of trade offers for a specific item.
 
 ## Running the Script  
 If run directly, the script provides an interactive menu to fetch player, guild, and trade data.
-`python main.py`
+```bash
+python main.py
+```
 Select options from the menu to retrieve information dynamically.
+Otherwise the package can be imported and run programatically in code.
+```bash
+pip install rotmg-scraper
+from rotmg-scraper import *
+```
